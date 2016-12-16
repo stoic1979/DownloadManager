@@ -39,6 +39,16 @@
     <string>Cancel</string>
    </property>
   </widget>
+  <widget class="QTextEdit" name="teUrl">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>80</y>
+     <width>341</width>
+     <height>61</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

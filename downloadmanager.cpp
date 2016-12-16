@@ -59,6 +59,7 @@ void DownloadManager::append(const QStringList &urlList) {
         QTimer::singleShot(0, this, SIGNAL(finished()));
 }
 
+
 /**
  * @brief DownloadManager::append
  * @param url
@@ -71,6 +72,11 @@ void DownloadManager::append(const QUrl &url){
 
     downloadQueue.enqueue(url);
     ++totalCount;
+}
+
+void DownloadManager::addNewDownlaodUrl(const QUrl &url) {
+    qDebug() << "Received new url for download: " << url;
+    append(url);
 }
 
 /**

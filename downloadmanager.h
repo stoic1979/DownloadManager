@@ -47,6 +47,9 @@ public:
 signals:
     void finished();
 
+public slots:
+    void addNewDownlaodUrl(const QUrl &url);
+
 private slots:
     void startNextDownload();
     void downloadProgress(qint64 bytesReceived, qint64 bytesTotal);

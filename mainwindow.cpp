@@ -34,6 +34,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     createMenus();
+
+
+    connect(&dlgNewDownload, SIGNAL(emitNewDownlaodUrl(const QUrl&)),
+            &dManager, SLOT(addNewDownlaodUrl(const QUrl&))) ;
 }
 
 MainWindow::~MainWindow()

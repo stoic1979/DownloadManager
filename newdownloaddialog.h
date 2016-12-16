@@ -15,10 +15,15 @@ public:
     explicit NewDownloadDialog(QWidget *parent = 0);
     ~NewDownloadDialog();
 
+signals:
+    void emitNewDownlaodUrl(const QUrl &url);
+
 private slots:
     void on_btnAddDownload_clicked();
 
     void on_btnCancelDownload_clicked();
+
+
 
 private:
     Ui::NewDownloadDialog *ui;

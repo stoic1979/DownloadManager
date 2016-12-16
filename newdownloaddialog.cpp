@@ -18,6 +18,8 @@ NewDownloadDialog::~NewDownloadDialog()
 
 void NewDownloadDialog::on_btnAddDownload_clicked()
 {
+
+    emit emitNewDownlaodUrl(QUrl(ui->teUrl->toPlainText()));
     hide();
 }
 
