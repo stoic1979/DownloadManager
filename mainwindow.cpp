@@ -70,6 +70,7 @@ void MainWindow::about() {
 
 void MainWindow::open() {
     qDebug() << "open";
+    dlgNewDownload.show();
 }
 
 void MainWindow::save() {

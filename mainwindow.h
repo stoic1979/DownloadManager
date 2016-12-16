@@ -28,6 +28,7 @@
 #include <QMainWindow>
 
 #include "downloadmanager.h"
+#include "newdownloaddialog.h"
 
 namespace Ui {
 class MainWindow;
@@ -55,6 +56,8 @@ private:
 
 
     DownloadManager dManager;
+
+    NewDownloadDialog dlgNewDownload;
 };
 
 #endif // MAINWINDOW_H

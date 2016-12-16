@@ -38,8 +38,11 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp\
-        downloadmanager.cpp
+        downloadmanager.cpp \
+    newdownloaddialog.cpp
 
-HEADERS  += mainwindow.h downloadmanager.h
+HEADERS  += mainwindow.h downloadmanager.h \
+    newdownloaddialog.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    newdownloaddialog.ui
