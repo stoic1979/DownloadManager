@@ -43,10 +43,9 @@ public:
     ~MainWindow();
 
 private slots:
-    void open();
-    void save();
-    void about();
-    void showSettings();
+    void aboutAboutDialog();
+    void showSettingsDialog();
+    void showNewDowlnoadDialog();
 
 private:
     void createMenus();

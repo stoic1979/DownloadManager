@@ -45,8 +45,7 @@ void MainWindow::createMenus()
 {
 
     QMenu *const fileMenu = menuBar()->addMenu(tr("&File"));
-    fileMenu->addAction(tr("&Open..."), this, SLOT(open()), QKeySequence::Open);
-    fileMenu->addAction("&Save As...", this, SLOT(save()));
+    fileMenu->addAction(tr("New Download"), this, SLOT(showNewDowlnoadDialog()));
     fileMenu->addSeparator();
     fileMenu->addAction(tr("E&xit"),this, SLOT(close()), QKeySequence::Quit);
 
@@ -55,24 +54,19 @@ void MainWindow::createMenus()
 
 
     QMenu *const helpMenu = menuBar()->addMenu(tr("&Help"));
-    helpMenu->addAction(tr("&About..."), this, SLOT(about()));
+    helpMenu->addAction(tr("&About..."), this, SLOT(aboutAboutDialog()));
     helpMenu->addSeparator();
 
 
 }
-void MainWindow::showSettings() {
+void MainWindow::showSettingsDialog() {
     qDebug() << "showSettings";
 }
 
-void MainWindow::about() {
+void MainWindow::aboutAboutDialog() {
     qDebug() << "about";
 }
 
-void MainWindow::open() {
-    qDebug() << "open";
+void MainWindow::showNewDowlnoadDialog() {
     dlgNewDownload.show();
-}
-
-void MainWindow::save() {
-    qDebug() << "save";
 }
