@@ -15,6 +15,11 @@ public:
     explicit NewDownloadDialog(QWidget *parent = 0);
     ~NewDownloadDialog();
 
+private slots:
+    void on_btnAddDownload_clicked();
+
+    void on_btnCancelDownload_clicked();
+
 private:
     Ui::NewDownloadDialog *ui;
 };

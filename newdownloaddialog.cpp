@@ -15,3 +15,13 @@ NewDownloadDialog::~NewDownloadDialog()
 {
     delete ui;
 }
+
+void NewDownloadDialog::on_btnAddDownload_clicked()
+{
+    hide();
+}
+
+void NewDownloadDialog::on_btnCancelDownload_clicked()
+{
+    hide();
+}
