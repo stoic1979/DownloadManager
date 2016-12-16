@@ -27,6 +27,8 @@
 
 #include <QMainWindow>
 
+#include "downloadmanager.h"
+
 namespace Ui {
 class MainWindow;
 }
@@ -39,8 +41,20 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+private slots:
+    void open();
+    void save();
+    void about();
+    void showSettings();
+
+private:
+    void createMenus();
+
 private:
     Ui::MainWindow *ui;
+
+
+    DownloadManager dManager;
 };
 
 #endif // MAINWINDOW_H

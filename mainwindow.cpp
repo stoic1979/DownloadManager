@@ -25,14 +25,53 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <QDebug>
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    createMenus();
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::createMenus()
+{
+
+    QMenu *const fileMenu = menuBar()->addMenu(tr("&File"));
+    fileMenu->addAction(tr("&Open..."), this, SLOT(open()), QKeySequence::Open);
+    fileMenu->addAction("&Save As...", this, SLOT(save()));
+    fileMenu->addSeparator();
+    fileMenu->addAction(tr("E&xit"),this, SLOT(close()), QKeySequence::Quit);
+
+    QMenu *const editMenu = menuBar()->addMenu(tr("&Edit"));
+    editMenu->addAction("Settings", this, SLOT(showSettings()));
+
+
+    QMenu *const helpMenu = menuBar()->addMenu(tr("&Help"));
+    helpMenu->addAction(tr("&About..."), this, SLOT(about()));
+    helpMenu->addSeparator();
+
+
+}
+void MainWindow::showSettings() {
+    qDebug() << "showSettings";
+}
+
+void MainWindow::about() {
+    qDebug() << "about";
+}
+
+void MainWindow::open() {
+    qDebug() << "open";
+}
+
+void MainWindow::save() {
+    qDebug() << "save";
 }
