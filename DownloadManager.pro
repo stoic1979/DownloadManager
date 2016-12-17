@@ -42,14 +42,16 @@ SOURCES += main.cpp\
            newdownloaddialog.cpp \
            settingsdialog.cpp \
            aboutdialog.cpp \
-           settings.cpp
+           settings.cpp \
+    utils.cpp
 
 HEADERS  += mainwindow.h \
             downloadmanager.h \
             newdownloaddialog.h \
             settingsdialog.h \
             aboutdialog.h \
-            settings.h
+            settings.h \
+    utils.h
 
 FORMS    += mainwindow.ui \
     newdownloaddialog.ui \

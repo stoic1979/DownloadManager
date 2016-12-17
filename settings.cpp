@@ -33,6 +33,6 @@ Settings::Settings():
 {}
 
 QString Settings::GetDownloadDirectory() {
-    return value("Download/directory").toString();
+    return value("Download/directory", "/home/neo/Desktop").toString();
 
 }
