@@ -30,6 +30,7 @@
 #include "downloadmanager.h"
 #include "newdownloaddialog.h"
 #include "settingsdialog.h"
+#include "aboutdialog.h"
 
 namespace Ui {
 class MainWindow;
@@ -52,13 +53,11 @@ private:
     void createMenus();
 
 private:
-    Ui::MainWindow *ui;
-
-
-    DownloadManager dManager;
-
-    NewDownloadDialog dlgNewDownload;
-    SettingsDialog dlgSettings;
+    Ui::MainWindow         *ui;
+    DownloadManager         dManager;
+    NewDownloadDialog       dlgNewDownload;
+    SettingsDialog          dlgSettings;
+    AboutDialog             dlgAbout;
 };
 
 #endif // MAINWINDOW_H

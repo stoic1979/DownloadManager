@@ -64,12 +64,11 @@ void MainWindow::createMenus()
 
 }
 void MainWindow::showSettingsDialog() {
-    qDebug() << "showSettings";
     dlgSettings.show();
 }
 
 void MainWindow::aboutAboutDialog() {
-    qDebug() << "about";
+    dlgAbout.show();
 }
 
 void MainWindow::showNewDowlnoadDialog() {
