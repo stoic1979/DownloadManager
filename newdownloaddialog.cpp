@@ -26,6 +26,8 @@
 #include "newdownloaddialog.h"
 #include "ui_newdownloaddialog.h"
 
+#include "settings.h"
+
 NewDownloadDialog::NewDownloadDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::NewDownloadDialog)
@@ -34,6 +36,9 @@ NewDownloadDialog::NewDownloadDialog(QWidget *parent) :
 
     setModal(true);
     setFixedSize(width(), height());
+
+    // load settings
+    ui->teFolder->setText(Settings::Instance()->GetDownloadDirectory());
 }
 
 NewDownloadDialog::~NewDownloadDialog()
