@@ -37,16 +37,19 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp\
-        downloadmanager.cpp \
-    newdownloaddialog.cpp \
-    settingsdialog.cpp \
-    aboutdialog.cpp
+           mainwindow.cpp\
+           downloadmanager.cpp \
+           newdownloaddialog.cpp \
+           settingsdialog.cpp \
+           aboutdialog.cpp \
+           settings.cpp
 
-HEADERS  += mainwindow.h downloadmanager.h \
-    newdownloaddialog.h \
-    settingsdialog.h \
-    aboutdialog.h
+HEADERS  += mainwindow.h \
+            downloadmanager.h \
+            newdownloaddialog.h \
+            settingsdialog.h \
+            aboutdialog.h \
+            settings.h
 
 FORMS    += mainwindow.ui \
     newdownloaddialog.ui \
