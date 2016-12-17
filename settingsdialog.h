@@ -45,8 +45,6 @@ public:
 
 private:
     Ui::SettingsDialog *ui;
-
-    Settings settings;
 };
 
 #endif // SETTINGSDIALOG_H

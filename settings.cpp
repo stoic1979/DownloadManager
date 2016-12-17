@@ -24,15 +24,28 @@
 
 #include "settings.h"
 
+#include <QDir>
+
 //
 // FIXME: need to generate deault settings if config file not found !!!
 //
+
+Settings *instance = 0;
 
 Settings::Settings():
     QSettings("config.ini", QSettings::IniFormat)
 {}
 
+Settings* Settings::Instance() {
+    if(!instance) {
+        instance = new Settings();
+    }
+    return instance;
+}
+
 QString Settings::GetDownloadDirectory() {
-    return value("Download/directory", "/home/neo/Desktop").toString();
+
+    QString defaultDirectory = QDir::currentPath();
+    return value("Download/directory", defaultDirectory).toString();
 
 }

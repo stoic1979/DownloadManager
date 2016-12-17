@@ -37,7 +37,7 @@ SettingsDialog::SettingsDialog(QWidget *parent) :
     setModal(true);
     setFixedSize(width(), height());
 
-    qDebug() << "Download Directory: " << settings.GetDownloadDirectory();
+    qDebug() << "Download Directory: " << Settings::Instance()->GetDownloadDirectory();
 }
 
 SettingsDialog::~SettingsDialog()

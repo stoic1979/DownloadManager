@@ -28,12 +28,21 @@
 
 #include <QSettings>
 
+/**
+ * @brief The Settings class
+ *
+ * A singleton settings class for whole application
+ */
 class Settings: public QSettings
 {
 public:
-    Settings();
+
+    static Settings* Instance();
 
     QString GetDownloadDirectory();
+
+private:
+    Settings();
 };
 
 #endif // SETTINGS_H

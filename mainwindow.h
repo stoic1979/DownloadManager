@@ -32,6 +32,8 @@
 #include "settingsdialog.h"
 #include "aboutdialog.h"
 
+#include "settings.h"
+
 namespace Ui {
 class MainWindow;
 }
@@ -58,6 +60,7 @@ private:
     NewDownloadDialog       dlgNewDownload;
     SettingsDialog          dlgSettings;
     AboutDialog             dlgAbout;
+    Settings               *settings;
 };
 
 #endif // MAINWINDOW_H

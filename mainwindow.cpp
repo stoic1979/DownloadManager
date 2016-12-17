@@ -35,6 +35,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     createMenus();
 
+    settings = Settings::Instance();
+
 
     connect(&dlgNewDownload, SIGNAL(emitNewDownlaodUrl(const QUrl&)),
             &dManager, SLOT(addNewDownlaodUrl(const QUrl&))) ;
@@ -43,6 +45,9 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
+
+    // mainwindows create it, it should delete it !
+    delete settings;
 }
 
 void MainWindow::createMenus()
