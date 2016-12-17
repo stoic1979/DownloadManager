@@ -29,6 +29,7 @@
 
 #include "downloadmanager.h"
 #include "newdownloaddialog.h"
+#include "settingsdialog.h"
 
 namespace Ui {
 class MainWindow;
@@ -57,6 +58,7 @@ private:
     DownloadManager dManager;
 
     NewDownloadDialog dlgNewDownload;
+    SettingsDialog dlgSettings;
 };
 
 #endif // MAINWINDOW_H

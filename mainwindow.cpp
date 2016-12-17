@@ -65,6 +65,7 @@ void MainWindow::createMenus()
 }
 void MainWindow::showSettingsDialog() {
     qDebug() << "showSettings";
+    dlgSettings.show();
 }
 
 void MainWindow::aboutAboutDialog() {
