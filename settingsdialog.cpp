@@ -49,3 +49,8 @@ void SettingsDialog::on_buttonBox_accepted()
 {
      qDebug() << "[SettingsDialog] :: Save settings...";
 }
+
+void SettingsDialog::on_buttonBox_rejected()
+{
+    qDebug() << "[SettingsDialog] :: Rejected settings...";
+}
