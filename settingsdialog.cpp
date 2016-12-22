@@ -44,3 +44,8 @@ SettingsDialog::~SettingsDialog()
 {
     delete ui;
 }
+
+void SettingsDialog::on_buttonBox_accepted()
+{
+     qDebug() << "Save settings...";
+}
